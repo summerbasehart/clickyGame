@@ -63,15 +63,9 @@ class App extends React.Component {
         <p>
           {this.state.alert}
         </p>
-        <Card className="bg-dark text-black">
+        <div class="card" id="cards">
           {this.showAnimal()}
-          <Card.Text>
-            <Card.Title>{data.map.animal}</Card.Title>
-          </Card.Text>
-        </Card>
-        {/* <div class="card" id="cards">
-          {this.showAnimal()}
-        </div> */}
+        </div>
       </div>
     );
   }
