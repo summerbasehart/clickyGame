@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import data from './data';
+import {Card, CardImg} from 'react-bootstrap';
 
 class App extends React.Component {
   state = {
@@ -56,9 +57,21 @@ class App extends React.Component {
         <p>
           Click each animal only once! Can your memory pass the test?
         </p>
-        <h2>Score = {this.state.currentScore} --- Top Score = {this.state.topScore}</h2>
-        <p>{this.state.alert}</p>
-        {this.showAnimal()}
+        <h2>
+          Score = {this.state.currentScore} --- Top Score = {this.state.topScore}
+        </h2>
+        <p>
+          {this.state.alert}
+        </p>
+        <Card className="bg-dark text-black">
+          {this.showAnimal()}
+          <Card.Text>
+            <Card.Title>{data.map.animal}</Card.Title>
+          </Card.Text>
+        </Card>
+        {/* <div class="card" id="cards">
+          {this.showAnimal()}
+        </div> */}
       </div>
     );
   }
